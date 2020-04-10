@@ -57,12 +57,12 @@ discordClient.on('message', async message => {
         const cmd = args[0].substring(1);
 
         if (cmd === "wtf") {
-            message.channel.send("`Scoreboard: " + wtfcounter + " #WTF`");
+            message.channel.send("`Scoreboard: " + wtfcounter + " WTF`");
         }
         return;
     }
 
-    let count = (message.content.match(/#WTF/g) || []).length;
+    let count = (message.content.match(/WTF/g) || []).length;
     if (count) {
         wtfcounter += count;
         save(wtfcounter);
