@@ -66,6 +66,19 @@ discordClient.on('message', async message => {
     if (count) {
         wtfcounter += count;
         save(wtfcounter);
+    } else {
+        // Also detect facepalm emoticon
+        let faceplan = 0;
+        for (let i = 0; i < message.content.length; i++) {
+            let emoticon = message.content.codePointAt(i) + "" + message.content.codePointAt(i + 1);
+            if (emoticon == "12931856614") {
+                faceplan++;
+            }
+        }
+        if (faceplan) {
+            wtfcounter += faceplan;
+            save(wtfcounter);
+        }
     }
 
     return;
