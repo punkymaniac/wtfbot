@@ -1,0 +1,20 @@
+{
+  "name": "wtfbot",
+  "version": "0.1.0",
+  "description": "Bot to made some stat on wtf situation",
+  "main": "wtfbot.js",
+  "scripts": {
+    "start": "node wtfbot.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "punkymaniac",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/punkymaniac/wtfbot.git"
+  },
+  "dependencies": {
+    "discord.js": "^12.1.1"
+  },
+  "devDependencies": {}
+}
